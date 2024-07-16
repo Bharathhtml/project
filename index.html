@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+button{
+    padding: 12px;
+    background-color: chartreuse;
+    color: rebeccapurple;
+    cursor: pointer;
+}
+ul{
+    border: 2px solid black;
+    width: 120px;
+    height: 400px;
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 20px;
+}
+ul li{
+    list-style-type: none;
+    font-size: 20px;
+    padding: 18px;
+    color: aliceblue;
+}
+#list{
+    position: fixed;
+    left: -50%
+}
+#list.active{
+    left: 0%;
+}
+</style>
+<body>
+<button><i class="fa-solid fa-list"></i></button>    
+<ul id="list">
+    <li>Home</li>
+    <li>Services</li>
+    <li>Contact</li>
+    <li>Number</li>
+    <li>Pencil</li>
+    <li>Pen</li>
+    <li>Rubber</li>
+</ul>
+</body>
+<script>
+const button=document.querySelector("button")
+const list=document.getElementById("list")
+console.log(list)
+button.addEventListener("click",()=>{
+ const toggle=list.classList.toggle("active")
+    if(toggle){
+        button.innerHTML=`<i class="fa-solid fa-xmark"></i>`
+    }
+    else{
+        button.innerHTML=`<i class="fa-solid fa-list"></i>`
+    }
+
+})
+
+
+
+
+
+
+</script>
+</html>
